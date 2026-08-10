@@ -1,0 +1,56 @@
+generated: '2026-08-09'
+method: searched
+source: https://claimgenius.com/geniusapi
+docs: https://claimgenius.com/geniusapi
+note: >-
+  Derived from the provider's own public GeniusAPI product page, not from a machine-readable spec.
+  Claim Genius publishes no OpenAPI, no reference documentation and no security scheme definition at a
+  public URL, so the fields below record what the company states about its auth model, at the level of
+  detail it states it. Full scheme detail (header name, token TTL, refresh behavior, error shapes)
+  requires developer access, which is requested by email.
+summary:
+  types:
+  - http
+  bearer_formats:
+  - JWT
+  api_key_in: []
+  oauth2_flows: []
+  oauth2: false
+  openid_connect: false
+  mutual_tls: false
+schemes:
+- name: jwtBearer
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  description: >-
+    JWT-based authentication. The provider states each integrator is issued a unique API ID and API
+    secret, which are exchanged for a JWT session token; a single API token then reaches all Genius
+    products and outputs.
+  token_endpoint: /api/auth/token
+  credentials:
+  - API ID
+  - API secret
+  sources:
+  - https://claimgenius.com/geniusapi
+credential_issuance:
+  self_serve: false
+  channel: email
+  contact: contactus@claimgenius.com
+  statement: >-
+    "Contact us at contactus@claimgenius.com to request developer access and documentation."
+  cta: Request API Access
+x-evidence:
+- url: https://claimgenius.com/geniusapi
+  http_status: 200
+  fetched: '2026-08-09'
+  note: >-
+    Page is a client-rendered React route; the served HTML is an empty shell. Copy was read from the
+    published route bundle https://claimgenius.com/assets/GeniusApiPage-2efvqe5o.js (HTTP 200).
+- url: https://claimgenius.com/assets/GeniusApiPage-2efvqe5o.js
+  http_status: 200
+  fetched: '2026-08-09'
+- url: https://api.claimgenius.com/api/auth/token
+  http_status: 404
+  fetched: '2026-08-09'
+  note: nginx 404 — the documented token endpoint is not served at the api. host.

@@ -1,0 +1,42 @@
+generated: '2026-08-09'
+method: searched
+source: https://claimgenius.com/geniusapi
+versioning:
+  scheme: date-stamped path segment
+  example: /api/pipelines/202103/...
+  current: not publicly stated
+  policy: >-
+    "Simple versioned endpoints for backward compatibility" — the stated intent is that a dated pipeline
+    path keeps working as new models ship. No formal version-support window is published.
+  docs: https://claimgenius.com/geniusapi
+deprecation:
+  policy_url: null
+  policy_published: false
+  sunset_header: unknown
+  note: No deprecation or sunset policy is published; no Deprecation pointer is emitted.
+sla:
+  url: null
+  uptime_target: null
+  note: >-
+    Marketing copy claims "always-on coverage for enterprise teams" and support responses within 24
+    hours, but no SLA document or numeric uptime target is published.
+status_page:
+  url: null
+  probed:
+  - url: https://status.claimgenius.com/
+    status: 404
+    note: >-
+      claimgenius.com uses wildcard DNS — every subdomain resolves. status.claimgenius.com resolves to
+      the shared 140.245.31.32 nginx and returns 404, so there is no status page. No StatusPage pointer
+      is emitted.
+changelog:
+  url: null
+  published: false
+deprecated_operations: []
+x-evidence:
+- url: https://claimgenius.com/assets/GeniusApiPage-2efvqe5o.js
+  http_status: 200
+  fetched: '2026-08-09'
+- url: https://status.claimgenius.com/
+  http_status: 404
+  fetched: '2026-08-09'

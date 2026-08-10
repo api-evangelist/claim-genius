@@ -1,0 +1,76 @@
+generated: '2026-08-09'
+method: searched
+source: https://claimgenius.com/geniusapi
+docs: https://claimgenius.com/geniusapi
+note: >-
+  Cross-cutting request/response semantics as stated by Claim Genius on its own public GeniusAPI page.
+  There is no public OpenAPI to derive from, so nothing below is inferred from a spec; anything the
+  company does not state publicly is recorded as unknown rather than guessed.
+style:
+  protocol: REST over HTTPS
+  media_type: application/json
+  statement: Clean RESTful design with predictable JSON structures.
+authentication:
+  style: JWT bearer token
+  token_endpoint: /api/auth/token
+  credentials: API ID + API secret
+  scope: One API token reaches all Genius products and outputs.
+  artifact: authentication/claim-genius-authentication.yml
+async_processing:
+  model: submit-and-poll
+  submit: POST /api/pipelines/{pipelineName} with claim metadata
+  handle: queue ID / request ID returned immediately
+  poll: GET /api/pipeline/requests/{requestId}
+  statement: >-
+    "Submit a claim request and receive queue IDs for immediate asynchronous results — your system
+    fetches outputs as they're ready."
+  callbacks: none documented
+  webhooks: none documented — results are retrieved by polling, not pushed
+media_handling:
+  upload: POST /api/file/upload
+  formats:
+  - JPG
+  - PNG
+  - MP4
+  - MOV
+  retrieval: Media links are returned as signed URLs.
+versioning:
+  scheme: date-stamped path segment
+  example: /api/pipelines/202103/...
+  intent: Simple versioned endpoints for backward compatibility.
+  artifact: lifecycle/claim-genius-lifecycle.yml
+filtering:
+  statement: Rich metadata and filtering for images, videos, and damage details.
+  parameters: not publicly documented
+idempotency:
+  supported: unknown
+  documented: false
+  note: >-
+    No idempotency key, retry-safety or replay contract is stated on any public page. Not asserted, so
+    no Idempotency pointer is emitted.
+pagination:
+  documented: false
+rate_limits:
+  documented: false
+error_envelope:
+  documented: false
+  note: No public error reference or problem-type catalog; errors/ is intentionally absent.
+request_tracing:
+  documented: false
+  note: Request IDs exist as pipeline queue handles, not as a documented tracing header.
+reference_data:
+  statement: Built-in endpoints for make, model, variant, and vehicle-code lookup to standardize VIN and vehicle data inputs.
+sandbox:
+  advertised: true
+  statement: Test sandbox and sample claims for fast onboarding.
+  publicly_reachable: false
+  note: >-
+    A sandbox is advertised but no base URL, test credential, or sample claim value is published, so
+    no sandbox/ artifact is written — there is nothing real to capture.
+x-evidence:
+- url: https://claimgenius.com/geniusapi
+  http_status: 200
+  fetched: '2026-08-09'
+- url: https://claimgenius.com/assets/GeniusApiPage-2efvqe5o.js
+  http_status: 200
+  fetched: '2026-08-09'

@@ -1,0 +1,79 @@
+generated: '2026-08-09'
+method: searched
+source: npm registry, PyPI, GitHub search, and https://claimgenius.com/geniusapi
+summary: >-
+  Claim Genius ships no maintained, publicly distributed client library. Two npm packages were published
+  from Claim Genius email addresses in December 2018 and never updated — both are demo/test artifacts at
+  v0.0.1 and v1.0.1, not a client SDK program. The company advertises "native SDKs" for iOS and Android
+  photo/video capture, but they are not distributed through any public registry (no CocoaPods, SPM,
+  Maven Central or npm listing found) and are obtained through the same gated developer-access request
+  as the API itself. No SDKs pointer is emitted: crediting an SDK program from two abandoned 2018 demo
+  packages would misstate what an integrator can actually pick up.
+packages:
+- language: javascript
+  registry: npm
+  name: claimgenius-sdk
+  url: https://www.npmjs.com/package/claimgenius-sdk
+  install: npm install claimgenius-sdk
+  version: 0.0.1
+  published: '2018-12-12'
+  description: Demo Sdk
+  author: Claim Genius
+  maintainer: aniketcgi
+  repository: https://github.com/admincgi/CGI_MobileTest
+  official: true
+  maintained: false
+  status: abandoned-demo
+- language: javascript
+  registry: npm
+  name: sdk-cgi
+  url: https://www.npmjs.com/package/sdk-cgi
+  install: npm install sdk-cgi
+  version: 1.0.1
+  published: '2018-12-14'
+  description: Claim Genius sdk
+  author: Aniket Raut <aniket.raut@claimgenius.com>
+  maintainer: aniketcgi
+  repository: https://github.com/aniketcgi/cgi-timer
+  official: true
+  maintained: false
+  status: abandoned-demo
+advertised_not_distributed:
+- name: Native iOS capture SDK
+  statement: >-
+    "Embed guided photo and video capture into iOS & Android apps and field workflows with our native
+    SDKs."
+  source: https://claimgenius.com/
+  public_distribution: none found
+- name: Native Android capture SDK
+  statement: >-
+    "Embed guided photo and video capture into iOS & Android apps and field workflows with our native
+    SDKs."
+  source: https://claimgenius.com/
+  public_distribution: none found
+registries_checked:
+- registry: npm
+  query: claimgenius / claim-genius
+  result: 2 first-party packages (both 2018 demos)
+- registry: pypi
+  query: claimgenius
+  result: 404 — none
+- registry: github
+  query: claimgenius
+  result: >-
+    No claimgenius or claim-genius GitHub organization exists (api.github.com/users/claimgenius 404,
+    api.github.com/orgs/claim-genius 404). Matching repositories belong to unrelated individuals or to
+    employees' personal accounts, and are not first-party published artifacts.
+x-evidence:
+- url: https://registry.npmjs.org/claimgenius-sdk
+  http_status: 200
+  fetched: '2026-08-09'
+- url: https://registry.npmjs.org/sdk-cgi
+  http_status: 200
+  fetched: '2026-08-09'
+- url: https://pypi.org/pypi/claimgenius/json
+  http_status: 404
+  fetched: '2026-08-09'
+- url: https://api.github.com/users/claimgenius
+  http_status: 404
+  fetched: '2026-08-09'
