@@ -22,6 +22,17 @@ tags:
 - Insurance Claims
 - Insurance Underwriting
 - Artificial Intelligence
+- Computer-Vision
+- Vehicle Inspection
+- Automotive
+- Claims Automation
+- Damage Assessment
+- Insurtech
+tags_raw:
+- Insurance
+- Insurance Claims
+- Insurance Underwriting
+- Artificial Intelligence
 - Computer Vision
 - Vehicle Inspection
 - Automotive
@@ -44,6 +55,11 @@ apis:
     documentation are requested by email.
   humanURL: https://claimgenius.com/geniusapi
   tags:
+  - Vehicle Inspection
+  - Damage Assessment
+  - Claims Automation
+  - Computer-Vision
+  tags_raw:
   - Vehicle Inspection
   - Damage Assessment
   - Claims Automation
