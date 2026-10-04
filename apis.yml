@@ -47,7 +47,7 @@ tags:
 - Insurance Claims
 - Insurance Underwriting
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Vehicle Inspection
 - Automotive
 - Claims Automation
@@ -64,6 +64,7 @@ tags_raw:
 - Claims Automation
 - Damage Assessment
 - InsurTech
+- Computer-Vision
 apis:
 - aid: claim-genius:geniusapi-suite
   name: Claim Genius GeniusAPI Suite
@@ -83,12 +84,13 @@ apis:
   - Vehicle Inspection
   - Damage Assessment
   - Claims Automation
-  - Computer-Vision
+  - Computer Vision
   tags_raw:
   - Vehicle Inspection
   - Damage Assessment
   - Claims Automation
   - Computer Vision
+  - Computer-Vision
   properties:
   - type: Authentication
     url: authentication/claim-genius-authentication.yml
