@@ -64,5 +64,89 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Claim Genius is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/claim-genius_stock/
+Claim Genius is an AI vehicle-inspection and automated damage-assessment company serving auto insurance claims, underwriting, dealerships, salvage, lease and rental, fleet and collision repair. Its GeniusINSPECT engine converts vehicle photos and video into structured, decision-ready data — per-part damage classification (scratch, dent, tear, glass, wheel), repair-versus-replace decisions, labor and paint hours, OEM part pricing, repairability status and total-loss probability. The capabilities are packaged as products (GeniusINSPECT for Claims, GeniusINSPECT for Underwriting, GeniusPrepost, GeniusOPS) and exposed to integrators through the GeniusAPI Suite, a JWT-authenticated REST API with asynchronous pipeline processing. The company has operated across the US, EU and Asia since 2018.
+
+**Areas:** Insurance · Insurance Claims · Insurance Underwriting · Artificial Intelligence · Computer Vision · Vehicle Inspection · Automotive · Claims Automation · Damage Assessment · Insurtech
+
+## Claim Genius on APIs.io
+
+Everything profiled for Claim Genius is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/claim-genius/](https://apis.io/providers/claim-genius/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Claim Genius GeniusAPI Suite](https://apis.io/apis/claim-genius/geniusapi-suite/) — The GeniusAPI Suite is Claim Genius's REST integration layer over its AI vehicle-inspection products. Documented flow: generate a JWT via /api/auth/token…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Claim Genius Authentication](https://apis.io/security/claim-genius/claim-genius-authentication/)
+- [Claim Genius Domain Security](https://apis.io/security/claim-genius/claim-genius-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://claimgenius.com/)
+- [Support](https://claimgenius.com/contact)
+- [Blog](https://claimgenius.com/claim-genius-blog/)
+- [Compliance](https://claimgenius.com/geniusapi)
+- [Terms of service](https://claimgenius.com/terms-of-service)
+- [Privacy policy](https://claimgenius.com/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 10.3** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 14.3 |
+| Access clarity | 0.0 |
+
+**Agent readiness 5.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.9** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/claim-genius/](https://apis.io/providers/claim-genius/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Claim Genius: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/claim-genius/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
